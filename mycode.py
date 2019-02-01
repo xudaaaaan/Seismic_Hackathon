@@ -79,9 +79,27 @@ class DataObfuscator():
 	def company_processor(ori_company):
 		pass
 
-	def process_data(filename):
-		self.read_file(filename)
-		
+	def address+processor(ori_add):
+		pass
+
+	def process_data(input_filename, output_filename):
+		data = self.read_file(input_filename)
+		for entry in data:
+			data[Name] = self.name_processor(data[Name])
+			data[Zip] = self.zip_processor(data[Zip])
+			data[SSN] = self. SSN_processor(data[SSN])
+			data[Phone] = self.phone_processor(data[Phone])
+			data[Email] = self.email_processor(data[Email])
+
+		self.output_file(data, output_filename)
+
+
+if __name__ == "__main__":
+	do = DataObfuscator()
+	do.fake_info()
+	do.process_data("data50.json", "output.json")
+
+
 
 
 
